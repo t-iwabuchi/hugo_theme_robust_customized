@@ -10,7 +10,7 @@
       {{ with .Section }}<li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="{{ $.Site.BaseURL }}{{ . | urlize }}/">{{ . | upper }}</a></li>{{ end }}
       {{ if eq (getenv "HUGO_ENV") "DEV" }}
       <li>{{ .WordCount }} Words</li>
-      {{ if .IsDraft }}<li style="color: #2196f3;">DRAFT</li>{{ end }}
+      {{ if .Draft }}<li style="color: #2196f3;">DRAFT</li>{{ end }}
       {{ end }}
     </ul>
 
