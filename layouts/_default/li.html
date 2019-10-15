@@ -1,6 +1,6 @@
 <article class="li">
   <a href="{{ .Permalink }}">
-    <div class="thumb thumb-{{ .File.UniqueID }}"></div>
+    <div class="thumb thumb-{{ with .File }}{{ .UniqueID }}{{ end }}"></div>
 
     <div class="inner">
       <h2 class="title">{{ .Title }}</h2>
